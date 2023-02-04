@@ -8,25 +8,24 @@ toogle.style.transition = 'all 0.3s linear'
 
 
 botao.addEventListener('click', function() {
-    // check which is the current theme and changes it
+    // check which is the current theme
     if(body.classList.contains('bg-gray-800')){
-        body.classList.remove('bg-gray-800')
-        body.classList.add('bg-white')
+        // changes the theme
+        body.classList.replace('bg-gray-800','bg-slate-300')
+        // moves the switch button
+        toogle.classList.replace('ml-[0.3rem]','ml-[3.4rem]')
+        // changes the switch button color
+        toogle.classList.replace('bg-gray-800', 'bg-slate-300')
         console.log('otario2')
     } 
-    else if(body.classList.contains('bg-white')){  
+    else if(body.classList.contains('bg-slate-300')){  
         console.log('otario')
-        body.classList.remove('bg-white')
-        body.classList.add('bg-gray-800')
-    }
-    // check position of the switch and changes it
-    if(toogle.classList.contains('ml-[0.3rem]')){
-        toogle.classList.replace('ml-[0.3rem]','ml-[3.4rem]')
-        toogle.classList.replace('bg-gray-800', 'bg-white')
-    }
-    else if(toogle.classList.contains('ml-[3.4rem]')){
+        // changes the theme
+        body.classList.replace('bg-slate-300','bg-gray-800')
+        // moves the switch button
         toogle.classList.replace('ml-[3.4rem]','ml-[0.3rem]')
-        toogle.classList.replace('bg-white', 'bg-gray-800')
+        // changes the switch button color
+        toogle.classList.replace('bg-slate-300', 'bg-gray-800')
     }
 })
 
